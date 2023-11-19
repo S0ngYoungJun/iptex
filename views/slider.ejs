@@ -1,0 +1,16 @@
+<article id="slider" class="swiper-container">
+  <div class="swiper-wrapper">
+    <% for (let i = 1; i <= 5; i++) { %>
+      <div class="swiper-slide">
+        <img src="/images/slide<%= i %>.jpg" alt="Slide <%= i %>">
+        <div class="slide-box" data-slide-index="<%= i - 1 %>"></div>
+      </div>
+    <% } %>
+  </div>
+  <!-- Add Pagination -->
+  <div class="swiper-pagination"></div>
+  <!-- Add Navigation -->
+  <div class="swiper-button-next"></div>
+  <div class="swiper-button-prev"></div>
+  <script src="/js/slider.js"></script>
+</article>
