@@ -7,14 +7,14 @@ const app = express();
 const port = 3000;
 
 // MySQL 연결 설정
-const connection = mysql.createConnection({
-  host: 'localhost',
-  user: 'root',
-  password: '723546',
-  database: 'reser',
-});
+// const connection = mysql.createConnection({
+//   host: 'localhost',
+//   user: 'root',
+//   password: '723546',
+//   database: 'reser',
+// });
 
-connection.connect();
+// connection.connect();
 app.set('view engine', 'ejs');
 // 미들웨어 설정
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -30,5 +30,5 @@ app.get('/', (req, res) => {
 // 기타 라우팅 및 서버 시작...
 
 app.listen(port, () => {
-  console.log(`Server is running on port ${port}`);
+  console.log(`Server is running at http://localhost:${port}`);
 });

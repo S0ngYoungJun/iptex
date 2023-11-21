@@ -8,30 +8,132 @@ body {
 
 header {
   display: flex;
-  justify-content: space-between;
   align-items: center;
   background-color: #333;
   color: #fff;
-  padding: 10px;
+  flex-direction: column;
   width:100vw;
-  height:20vh;
+  height:16vh;
 }
 
+
+.upper-box {
+  display: flex;
+  width:100vw;
+  height:12vh;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.upper-left {
+  width: 30%;
+  background-color: #555;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.menu-item {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  line-height: 5vh; /* 수직 정렬을 위해 line-height 사용 */
+  cursor: pointer;
+  position: absolute;
+  top: 60px; /* 햄버거 메뉴 아이콘의 위치 조절 */
+  left: 10px;
+  z-index: 2;
+}
+.menu-item:nth-child(1) {
+  top: 60px;
+}
+
+.menu-item:nth-child(2) {
+  top: 100px;
+}
+
+.menu-item:nth-child(3) {
+  top: 140px;
+}
+
+.menu-item:nth-child(4) {
+  top: 180px;
+}
+
+.upper-center {
+  width: 30%;
+  background-color: #777;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.upper-right {
+  width: 30%;
+  background-color: #999;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.lower-box {
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  width:100vw;
+  height:4vh;
+  background-color: #eee;
+}
+
+.lower-box > div {
+  width: 30%;
+  background-color: #ccc;
+  box-sizing: border-box;
+}
 main {
   padding: 20px;
   width:100vw;
-  height:40vh;
+  height:60vh;
 }
 
 #slider {
   width: 100vw;
-  height: 40vh;
+  height: 60vh;
   overflow: hidden;
+  position: relative;
 }
 
+.swiper-container {
+  position: relative;
+}
+
+.thumbnails {
+  display: flex;
+  gap: 10px; /* 각 섬네일 간격 조절 */
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  z-index: 1;
+  flex-direction: column;
+}
+
+.thumbnail {
+  cursor: pointer;
+}
+
+.thumbnail img {
+  width: 100%; /* 이미지가 섬네일 내에 꽉 차도록 설정 */
+  height: auto;
+  width: auto\9; /* IE8이하는 자동으로 이미지 비율 유지 */
+  max-height: 100px; /* 예시로 100px로 설정, 필요에 따라 조절 */
+  display: block;
+  margin: 0 auto; /* 이미지 중앙 정렬 */
+}
 .swiper-slide {
   width: 100%;
   height: 100%;
+}
+.swiper-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 
 footer {

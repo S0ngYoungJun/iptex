@@ -12,5 +12,14 @@
   <!-- Add Navigation -->
   <div class="swiper-button-next"></div>
   <div class="swiper-button-prev"></div>
+
+  <div class="thumbnails">
+    <% for (let i = 1; i <= 5; i++) { %>
+      <div class="thumbnail" data-thumbnail-index="<%= i - 1 %>">
+        <img src="/images/slide<%= i %>.jpg" alt="Thumbnail <%= i %>">
+      </div>
+    <% } %>
+  </div>
+  
   <script src="/js/slider.js"></script>
 </article>
